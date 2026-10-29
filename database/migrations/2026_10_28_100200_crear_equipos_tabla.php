@@ -12,11 +12,11 @@ return new class extends Migration
             $tabla->id();
             $tabla->string('nombre', 100)->unique();
             $tabla->string('slug', 120)->unique();
-            $tabla->string('sigla', 3)->unique();             // AND, CUS, LIM...
+            $tabla->string('sigla', 3)->unique();             
             $tabla->string('ciudad', 100);
             $tabla->string('entrenador', 100)->nullable();
             $tabla->unsignedSmallInteger('anio_fundacion')->nullable();
-            $tabla->string('escudo')->nullable();             // nombre del archivo en public/assets/img/escudos
+            $tabla->string('escudo')->nullable();             
             $tabla->timestamps();
         });
     }
