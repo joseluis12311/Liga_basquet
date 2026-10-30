@@ -1,0 +1,80 @@
+.encabezado { background: #fff; border-bottom: 1px solid var(--borde); position: sticky; top: 0; z-index: 50; }
+.encabezado__interior { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; min-height: 72px;  display: flex; align-items: center; gap: 1.5rem; }
+.marca { display: inline-flex; align-items: center; gap: .65rem; }
+.marca__icono { width: 40px; height: 40px; }
+.marca__texto { display: flex; flex-direction: column; line-height: .88; font-family: var(--fuente-titulos);  font-style: italic; font-weight: 800; font-size: 1.45rem; text-transform: uppercase; color: var(--tinta); }
+.marca__texto span:last-child { color: var(--azul); font-size: 1.6rem; }
+.marca:hover { color: inherit; }
+.navegacion { display: flex; gap: .3rem; margin-left: auto; }
+.navegacion__enlace { display: inline-flex; align-items: center; gap: .45rem; padding: .55rem 1rem; border-radius: 999px;  font-weight: 700; font-size: .93rem; color: var(--suave); transition: background .15s, color .15s; }
+.navegacion__enlace:hover { background: var(--superficie-2); color: var(--tinta); }
+.navegacion__enlace.es-activo { background: var(--tinta); color: #fff; }
+.acciones-encabezado { display: flex; align-items: center; gap: .6rem; }
+.boton-menu { display: none; background: none; border: 0; font-size: 1.8rem; cursor: pointer; padding: .2rem .4rem; margin-left: auto; }
+.menu-usuario { position: relative; }
+.menu-usuario__panel { position: absolute; right: 0; top: calc(100% + .5rem); min-width: 230px; padding: .4rem;  background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); box-shadow: var(--sombra); }
+.menu-usuario__panel a, .menu-usuario__panel button { display: flex; align-items: center; gap: .6rem; width: 100%; text-align: left;  padding: .6rem .7rem; border-radius: 8px; background: none; border: 0; cursor: pointer; font-weight: 600; }
+.menu-usuario__panel a:hover, .menu-usuario__panel button:hover { background: var(--superficie-2); color: var(--tinta); }
+.menu-usuario__datos { padding: .5rem .7rem .7rem; border-bottom: 1px solid var(--borde); margin-bottom: .3rem; }
+.menu-usuario__datos strong { display: block; }
+
+@media (max-width: 900px) {  
+  .encabezado__interior { flex-wrap: wrap; padding-top: .6rem; padding-bottom: .6rem; gap: .6rem 1rem; }  
+  .boton-menu { display: block; }  
+  .acciones-encabezado { order: 2; }  
+  .navegacion { display: none; order: 3; flex-basis: 100%; flex-direction: column; margin: 0; padding-bottom: .5rem; }  
+  .navegacion.esta-abierta { display: flex; }  
+  .navegacion__enlace { border-radius: var(--radio); }
+}
+.portada { 
+  color: #fff;  
+  background: linear-gradient(115deg, rgba(11, 27, 51, .94) 8%, rgba(23, 71, 255, .78) 100%), var(--imagen, none) center / cover, var(--tinta); 
+}
+.portada__interior { max-width: 1200px; margin: 0 auto; padding: 4.2rem 1.25rem 4.6rem; }
+.portada__titulo { color: #fff; max-width: 14ch; margin-bottom: 1rem; }
+.portada__texto { max-width: 52ch; font-size: 1.12rem; color: #d6defa; margin-bottom: 1.8rem; }
+.portada__acciones { display: flex; flex-wrap: wrap; gap: .8rem; }
+.pagina { max-width: 1200px; margin: 0 auto; padding: 2rem 1.25rem 3.5rem; min-height: 65vh; }
+.pagina__titulo { margin-bottom: 1.2rem; }
+.seccion + .seccion { margin-top: 2.6rem; }
+.seccion__titulo { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1.1rem; }
+.seccion__titulo h2 { margin: 0; }
+.enlace-mas { display: inline-flex; align-items: center; gap: .4rem; font-weight: 800; color: var(--azul); }
+.enlace-mas:hover { text-decoration: underline; }
+.diseno { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 1.8rem; align-items: start; }
+.diseno__lateral { display: grid; gap: 1.2rem; }
+
+@media (max-width: 980px) { .diseno { grid-template-columns: 1fr; } }
+
+.pie { background: var(--tinta); color: #b9c4dd; font-size: .9rem; }
+.pie__interior { max-width: 1200px; margin: 0 auto; padding: 1.8rem 1.25rem; display: flex; flex-wrap: wrap;  justify-content: space-between; align-items: center; gap: 1rem; }
+.pie nav { display: flex; gap: 1.3rem; flex-wrap: wrap; }
+.pie a:hover { color: #fff; }
+.tarjeta-acceso { max-width: 440px; margin: 2rem auto; padding: 2.2rem; background: #fff;  border: 1px solid var(--borde); border-radius: var(--radio-grande); box-shadow: var(--sombra); }
+.tarjeta-acceso h1 { font-size: 2.4rem; }
+.tarjeta-acceso__pie { margin: 1.3rem 0 0; text-align: center; color: var(--suave); font-size: .93rem; }
+.tarjeta-acceso__pie a { color: var(--azul); font-weight: 800; }
+.admin { display: grid; grid-template-columns: 255px minmax(0, 1fr); min-height: 100vh; }
+.admin__lateral { position: sticky; top: 0; height: 100vh; overflow-y: auto; padding: 1.3rem 1rem;  background: var(--tinta); color: #c5d0ea; display: flex; flex-direction: column; gap: 1.3rem; }
+.admin__marca { display: flex; flex-direction: column; gap: .5rem; padding: 0 .5rem; }
+.admin__marca .marca__texto { color: #fff; }
+.admin__marca .marca__texto span:last-child { color: var(--naranja); }
+.admin__marca small { color: #8fa0c4; }
+.admin__menu { display: grid; gap: .2rem; }
+.admin__menu a { display: flex; align-items: center; gap: .7rem; padding: .7rem .85rem; border-radius: 10px;  color: #c5d0ea; font-weight: 700; transition: background .15s; }
+.admin__menu a i { font-size: 1.1rem; }
+.admin__menu a:hover { background: rgba(255, 255, 255, .08); color: #fff; }
+.admin__menu a.es-activo { background: var(--naranja); color: #fff; }
+.admin__pie { margin-top: auto; display: grid; gap: .2rem; border-top: 1px solid rgba(255, 255, 255, .12); padding-top: 1rem; }
+.admin__pie a, .admin__pie button { display: flex; align-items: center; gap: .7rem; padding: .6rem .85rem; width: 100%; background: none; border: 0; border-radius: 10px; color: #c5d0ea; cursor: pointer; text-align: left; font-weight: 600; }
+.admin__pie a:hover, .admin__pie button:hover { background: rgba(255, 255, 255, .08); color: #fff; }
+.admin__contenido { padding: 1.8rem clamp(1rem, 3vw, 2.5rem) 3.5rem; min-width: 0; }
+.admin__cabecera { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.admin__cabecera h1 { margin: 0; font-size: 2.4rem; }
+
+@media (max-width: 900px) {  
+  .admin { grid-template-columns: 1fr; }  
+  .admin__lateral { position: static; height: auto; flex-direction: row; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; }  
+  .admin__menu { display: flex; flex-wrap: wrap; }  
+  .admin__pie { margin: 0; border: 0; padding: 0; display: flex; }
+}

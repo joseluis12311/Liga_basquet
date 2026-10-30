@@ -1,0 +1,32 @@
+.tarjetas-estadisticas { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.8rem; }
+.estadistica { display: flex; align-items: center; gap: 1rem; padding: 1.15rem 1.3rem; background: #fff;  border: 1px solid var(--borde); border-left: 5px solid var(--naranja); border-radius: var(--radio-grande); transition: transform .15s, box-shadow .15s; }
+a.estadistica:hover { transform: translateY(-2px); box-shadow: var(--sombra); color: inherit; }
+.estadistica__icono { font-size: 1.9rem; color: var(--azul); }
+.estadistica__valor { display: block; font-family: var(--fuente-titulos); font-size: 2.3rem; font-weight: 800; line-height: 1; color: var(--tinta); }
+.estadistica__etiqueta { color: var(--suave); font-size: .86rem; font-weight: 600; }
+.columnas-admin { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.2rem; }
+.barra-herramientas { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem; margin-bottom: 1rem; }
+.barra-herramientas .seleccion, .barra-herramientas .entrada { width: auto; min-width: 210px; }
+.tabla-admin { width: 100%; }
+.tabla-admin thead th { padding: .8rem 1rem; text-align: left; font-size: .78rem; font-weight: 800; color: var(--suave);  background: var(--superficie-2); border-bottom: 1px solid var(--borde); white-space: nowrap; }
+.tabla-admin tbody td { padding: .85rem 1rem; border-bottom: 1px solid var(--borde); vertical-align: middle; }
+.tabla-admin tbody tr:last-child td { border-bottom: 0; }
+.tabla-admin tbody tr:hover { background: #f8f9fc; }
+.tabla-admin .acciones { text-align: right; white-space: nowrap; }
+.tabla-admin .num { text-align: right; font-variant-numeric: tabular-nums; }
+.tabla-admin .versus { display: flex; align-items: center; gap: .6rem; font-weight: 700; }
+.chip-marcador { display: inline-block; min-width: 4.8rem; text-align: center; padding: .2rem .65rem; border-radius: 8px; background: var(--tinta); color: #fff;  font-family: var(--fuente-titulos); font-size: 1.15rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.miniatura { width: 58px; height: 40px; object-fit: cover; border-radius: 8px; background: var(--superficie-2); display: block; }
+.tarjeta-formulario { max-width: 780px; padding: 1.7rem; }
+.tarjeta-formulario--ancha { max-width: 920px; }
+.acciones-formulario { display: flex; gap: .7rem; margin-top: 1.4rem; padding-top: 1.2rem; border-top: 1px solid var(--borde); }
+.imagen-actual { display: flex; align-items: center; gap: .8rem; margin-bottom: .6rem; color: var(--suave); font-size: .85rem; }
+.imagen-actual img { width: 90px; height: 60px; object-fit: cover; border-radius: 8px; }
+.vista-previa { max-width: 220px; margin-top: .6rem; border-radius: 10px; border: 1px solid var(--borde); }
+.conjunto-campos { border: 1.5px solid var(--borde); border-radius: var(--radio); padding: 1rem 1.2rem .2rem; margin: 0 0 1.1rem; }
+.conjunto-campos legend { padding: 0 .5rem; color: var(--suave); font-size: .85rem; font-weight: 700; }
+.lista-simple { list-style: none; margin: 0; padding: 0; }
+.lista-simple li { display: flex; justify-content: space-between; align-items: center; gap: .8rem; padding: .75rem 1.2rem; border-top: 1px solid var(--borde); }
+.fila-edicion { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.fila-edicion .entrada { width: 130px; padding: .4rem .6rem; }
+.fila-edicion .entrada--corta { width: 84px; }
